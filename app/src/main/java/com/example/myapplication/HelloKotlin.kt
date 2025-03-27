@@ -3,20 +3,46 @@ package com.example.myapplication
 fun main() {
     println("Hola Kotlin")
 
-    //Variables
 
-    var myString="Esto es una cadena de texto"
-    myString="EL valor ha cambiado"
-    println(myString)
+    print("Por favor ingresa un texto: ")
+    var myString = readLine() ?: "Valor por defecto"  // Si el usuario no ingresa nada, asignamos un valor por defecto
+    println("El texto que ingresaste es: $myString")
 
-    var myInt = 5
-    println(myInt)
+    print("Por favor ingresa un número entero: ")
+    val myInt = readLine()?.toIntOrNull() ?: 0  // Si no ingresa un número válido, se asigna 0
+    println("El número que ingresaste es: $myInt")
 
-    var myDouble= 25.0
-    println(myDouble)
+    print("Por favor ingresa un número decimal: ")
+    val myDouble = readLine()?.toDoubleOrNull() ?: 0.0  // Si no ingresa un número decimal válido, se asigna 0.0
+    println("El número decimal que ingresaste es: $myDouble")
 
-    //Constantes
+    val myConst = "Valor constante"
+    println("Constante: $myConst")
 
-    val myConst="Valor constante"
-    println(myConst)
+
+    println("\nLlamando a la función de cambio de texto:")
+    val nuevoValor = cambiarTexto("Este es un nuevo texto")
+    println(nuevoValor)
+
+    println("\nVerificación de número:")
+    verificarNumero(myInt)
+
+
+    println("\nMostrando los elementos de la lista:")
+}
+
+
+fun cambiarTexto(texto: String): String {
+    return "Texto modificado: $texto"
+}
+
+
+fun verificarNumero(num: Int) {
+    if (num > 0) {
+        println("El número $num es positivo.")
+    } else if (num < 0) {
+        println("El número $num es negativo.")
+    } else {
+        println("El número es cero.")
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -16,12 +17,17 @@ import com.example.myapplication.ui.theme.MyApplicationTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val miTexto: TextView = findViewById(R.id.textView)
+
+        miTexto.text = "¡Bienvenidos a Kotlin!"
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Juan",
+                        name = "kotlin",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
