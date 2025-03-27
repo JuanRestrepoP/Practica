@@ -12,7 +12,7 @@ fun main() {
     var myInt = 5
     println(myInt)
 
-    var myDouble= 2.5
+    var myDouble= 25.0
     println(myDouble)
 
     //Constantes
