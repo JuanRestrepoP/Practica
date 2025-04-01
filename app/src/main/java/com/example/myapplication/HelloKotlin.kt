@@ -27,8 +27,6 @@ fun main() {
     println("\nVerificación de número:")
     verificarNumero(myInt)
 
-
-    println("\nMostrando los elementos de la lista:")
 }
 
 
